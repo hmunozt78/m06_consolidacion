@@ -5,13 +5,15 @@ Para obtener copia de este proyecto, ejecute el siguiente comando:
 
 git clone https://github.com/hmunozt78/m06_consolidacion.git
 
-PARTE 1. CREAR EL AMBIENTE DE DESARROLLO VIRTUAL PARA EL PROYECTO
-
+'''
+#PARTE 1. CREAR EL AMBIENTE DE DESARROLLO VIRTUAL PARA EL PROYECTO
+'''
 Este constará de:
 ● Directorio del proyecto: proyecto_vehiculos_django. 
+(REALIZADO)
 
 ● Ambiente virtual con virtualenvwrapper con el nombre de proyecto_vehiculos_django .
-
+(REALIZADO)
 
 ● El entorno virtual contendrá las siguientes librerías:
     ○ Django versión 4.0.5.
@@ -23,7 +25,6 @@ Este constará de:
 
 ● Crear una aplicación vehículo, la cual contiene las siguientes características:
     ○ Marca: Fiat, Chevrolet, Ford y Toyota - 20 caracteres como máximo, y por defecto Ford.
-
     ○ Modelo1 - 100 caracteres como máximo.
     ○ Serial Carrocería - 50 caracteres como máximo.
     ○ Serial Motor - 50 caracteres como máximo.
@@ -31,16 +32,22 @@ Este constará de:
     ○ Precio.
     ○ Fecha de creación.
     ○ Fecha de modificación.
+(REALIZADO)
 
 ● Crear un usuario super administrador del framework Django con username: admin y password:admin.
+(REALIZADO)
 
 ● Registrar la aplicación sitio de administración de Django.
+(REALIZADO)
 
+PARTE 2 
 
-PARTE 2 ● Crear una página de inicio (index.html), que indique un texto simple en HTML “Catalogo de 
+● Crear una página de inicio (index.html), que indique un texto simple en HTML “Catalogo de 
 Vehículos”, y que apunte a http://localhost:8000
+(REALIZADO)
 
 ● Crear un formulario de ingreso de vehículos, con los datos de cada uno de los campos: marca, modelo, serial carrocería, serial motor, categoría y precio, en el siguiente enlace: http://localhost:8000/vehiculo/add
+(EN DESARROLLO)
 
 
 PARTE 3. AGREGANDO MENÚ CON BOOTSTRAP
@@ -49,6 +56,7 @@ PARTE 3. AGREGANDO MENÚ CON BOOTSTRAP
 Tomando como base: https://getbootstrap.esdocu.com/docs/5.1/components/navbar/
 
 En el menú inicio debe redireccionar a la página index, y el botón en el menú Agregar a la página de agregar vehículos:
+(REALIZADO)
 
 PARTE 4. 
 
