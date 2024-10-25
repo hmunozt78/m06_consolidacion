@@ -47,7 +47,7 @@ Vehículos”, y que apunte a http://localhost:8000
 (REALIZADO)
 
 ● Crear un formulario de ingreso de vehículos, con los datos de cada uno de los campos: marca, modelo, serial carrocería, serial motor, categoría y precio, en el siguiente enlace: http://localhost:8000/vehiculo/add
-(EN DESARROLLO)
+(REALIZADO)
 
 
 PARTE 3. AGREGANDO MENÚ CON BOOTSTRAP

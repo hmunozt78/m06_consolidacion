@@ -6,13 +6,13 @@ from .models import Vehiculo
 class VehiculoForm(forms.ModelForm):
     class Meta:
         model = Vehiculo
-        fields = ['marca', 'modelo', 'serial carroceria', 'categoria', 'precio']
+        fields = ['marca', 'modelo', 'serial', 'categoria', 'precio']
         # fields = "__all__" -> incluir todos los atributos del modelo
         # exclude = ['direccion'] -> no incluir los atributos que queremos
         widgets = {
             'marca': forms.Select(attrs={'class': 'form-control', 'required': 'required'}),
             'modelo': forms.TextInput(attrs={'class': 'form-control', 'required': 'required'}),
-            'serial_carroceria': forms.TextInput(attrs={'class': 'form-control', 'required': 'required'}),
+            'serial': forms.TextInput(attrs={'class': 'form-control', 'required': 'required'}),
             'categoria': forms.Select(attrs={'class': 'form-control', 'required': 'required'}),
             'precio': forms.NumberInput(attrs={'class': 'form-control', 'required': 'required', 'value': 9999999, 'min': 1}),
         }
