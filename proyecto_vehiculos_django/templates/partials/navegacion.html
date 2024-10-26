@@ -7,9 +7,27 @@
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
           <a class="nav-link active" aria-current="page" href="{% url "home" %}">Inicio</a>
-          <a class="nav-link" href="{% url "registro" %}">Agregar</a>
-          <a class="nav-link" href="#">Listar</a>
+          {% if user.is_authenticated %}
+            <a class="nav-link" href="{% url "registro" %}">Agregar</a>
+            <a class="nav-link" href="#">Listar</a>
+          {% endif %}
+          
+          
         </div>
+        
+      </div>
+      <div class = "nav justify-content-end">
+        {% if not user.is_authenticated %}
+          <a class="nav-link" href="{% url "login" %}">Login</a>
+          <a class="nav-link" href="{% url "reg_usuario" %}">Registrar</a>
+        {% else %}
+        <form method="post" action="{% url "salida" %}" class="ms-3">
+          {% csrf_token %}
+          <button type="input" class="btn btn-danger">Logout</button>
+        </form>
+        {% endif %}
+        
+        
       </div>
     </div>
   </nav>
