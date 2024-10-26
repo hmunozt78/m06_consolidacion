@@ -3,9 +3,11 @@ from django.forms import ValidationError
 from django.contrib import messages
 from .models import Vehiculo
 from .forms import VehiculoForm
+from django.contrib.auth.decorators import login_required, permission_required 
 
 # Create your views here.
-
+@login_required(login_url='/usuarios/login/')
+@permission_required('vehiculo.add_vehiculo', raise_exception=False, login_url='/')
 def registro(request):
     #return render(request, "vehiculo/registro_vehiculo.html", {})
     if request.method == 'POST':

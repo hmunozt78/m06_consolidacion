@@ -67,4 +67,4 @@ En el menú inicio debe redireccionar a la página index, y el botón en el men�
 
 4.2 Listar los vehículos, y agregar el listado de los mismos al menú de Listar. Asignar tres tipos de condición de precios: bajo, entre 0 y 10000; Medio, para mayores de 10000 y 30000; y alto, para mayores de 30000. Solo se puede visualizar para usuarios autenticados. Los usuarios registrados y con el permiso de “Can add vehiculo model” pueden agregar los vehículos tanto por la interfaz del administrador, como por el enlace vehiculo/add o por el menú de Agregar.
 
-4.3Usuario Registrado, y con permisos de visualizar_catalogo y de add_vehiculomodel agregado por medio de la interfaz del administrador con la opción de Staff.
+4.3 Usuario Registrado, y con permisos de visualizar_catalogo y de add_vehiculomodel agregado por medio de la interfaz del administrador con la opción de Staff.

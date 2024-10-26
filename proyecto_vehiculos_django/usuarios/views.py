@@ -4,14 +4,18 @@ from django.contrib.auth.views import LoginView, LogoutView
 from django.views.generic import CreateView
 from django.urls import reverse_lazy
 from django.contrib import messages
+from django.contrib.contenttypes.models import ContentType
+#from .. import vehiculo
+from django.contrib.auth.models import Permission
+
 
 # Create your views here.
 
 # def login(request):
 #     return render(request, "usuarios/login.html", {})
 
-def reg_usuario(request):
-    return render(request, "usuarios/reg_usuarios.html", {})
+# def reg_usuario(request):
+#     return render(request, "usuarios/reg_usuarios.html", {})
 
 class UserLoginView(LoginView):
     template_name = 'usuarios/login.html'
@@ -38,7 +42,23 @@ class UserRegistroView(CreateView):
     template_name = 'usuarios/reg_usuarios.html'
     success_url = reverse_lazy('usuarios/login')
     
+    
+    ##
+    ##
+    ##  AQUI DEBO REVISAR COMO AGREGAR LOS PERMISOS AL CREAR EL USUARIO
+    ##
+    ##
+    ##
+    
     def form_valid(self, form):
+        content_type = ContentType.objects.get_for_model(user)
+            
+        # obtenemos el permiso a asignar
+        ver_vehiculos = Permission.objects.get(codename='add_vehiculo', content_type=content_type)
+        
+        user = form.save() 
+        
+        user.permissions.add(user.add_vehiculo)
         messages.success(self.request, 'Registro realizo con exito.')
         return super().form_valid(form)
         
