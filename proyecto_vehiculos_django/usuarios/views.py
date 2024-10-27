@@ -51,14 +51,12 @@ class UserRegistroView(CreateView):
     ##
     
     def form_valid(self, form):
-        content_type = ContentType.objects.get_for_model(user)
+        user = form.save(commit=False)
+        user.save()
+        
+        permiso = Permission.objects.get(codename= 'add_vehiculo', content_type__app_label='vehiculo')
             
-        # obtenemos el permiso a asignar
-        ver_vehiculos = Permission.objects.get(codename='add_vehiculo', content_type=content_type)
-        
-        user = form.save() 
-        
-        user.permissions.add(user.add_vehiculo)
+        user.user_permissions.add(permiso)        
         messages.success(self.request, 'Registro realizo con exito.')
         return super().form_valid(form)
         
